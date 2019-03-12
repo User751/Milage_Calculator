@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D0CF11222372D8F00ED86D3 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0CF11122372D8F00ED86D3 /* Log.swift */; };
+		4DEE355F223872E40024C3FC /* CharacterSet-decimalDigitsAndDecimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE355E223872E40024C3FC /* CharacterSet-decimalDigitsAndDecimals.swift */; };
 		BE0AEC0D22349D7100E43074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AEC0C22349D7100E43074 /* AppDelegate.swift */; };
 		BE0AEC0F22349D7100E43074 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AEC0E22349D7100E43074 /* MainViewController.swift */; };
 		BE0AEC1222349D7100E43074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE0AEC1022349D7100E43074 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		4D0CF11122372D8F00ED86D3 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		4DEE355E223872E40024C3FC /* CharacterSet-decimalDigitsAndDecimals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet-decimalDigitsAndDecimals.swift"; sourceTree = "<group>"; };
 		BE0AEC0922349D7100E43074 /* MilageCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilageCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE0AEC0C22349D7100E43074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE0AEC0E22349D7100E43074 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				BE0AEC0E22349D7100E43074 /* MainViewController.swift */,
 				BE0AEC1E2234A1BD00E43074 /* LogTableViewController.swift */,
 				4D0CF11122372D8F00ED86D3 /* Log.swift */,
+				4DEE355E223872E40024C3FC /* CharacterSet-decimalDigitsAndDecimals.swift */,
 				BE0AEC1022349D7100E43074 /* Main.storyboard */,
 				BE0AEC1322349D7400E43074 /* Assets.xcassets */,
 				BE0AEC1522349D7400E43074 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				BE0AEC1F2234A1BD00E43074 /* LogTableViewController.swift in Sources */,
 				BE0AEC0F22349D7100E43074 /* MainViewController.swift in Sources */,
+				4DEE355F223872E40024C3FC /* CharacterSet-decimalDigitsAndDecimals.swift in Sources */,
 				4D0CF11222372D8F00ED86D3 /* Log.swift in Sources */,
 				BE0AEC0D22349D7100E43074 /* AppDelegate.swift in Sources */,
 			);

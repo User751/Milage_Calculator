@@ -17,13 +17,40 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         milesTextField.delegate = self
         gallonsTextField.delegate = self
+        
+        
+    }
+    // If returns false, the input text field will not accept the character
+    // Returns false if not a number or a number with one decimal point.
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool
+    {
+        let currentText = textField.text ?? ""
+        guard let stringRange = Range(range, in: currentText) else { return false }
+        
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+        
+        let newCharacters = CharacterSet(charactersIn: string)
+        
+        let decimalDigitsAndDecimal = CharacterSet.decimalDigitsAndDecimals
+        
+        if currentText.contains(".") && string.contains(".") {
+            return false
+        }
+        
+        if (string.components(separatedBy: ".").count > 2) {
+            return false
+        }
+        
+        if updatedText.count <= 6 && decimalDigitsAndDecimal.isSuperset(of: newCharacters) {
+            return true
+        }
+        
+        return false
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        // If returns false, the input text field will not accept the character
-        return true
-    }
-
+    
     @IBAction func didTapLogButton(_ sender: UIButton) {
         print("Tapped log button")
     }
@@ -36,4 +63,3 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         }
     }
 }
-
