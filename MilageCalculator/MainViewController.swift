@@ -63,16 +63,3 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         }
     }
 }
-
-extension CharacterSet {
-    // Extending character set in order to provide decimals too
-    
-    static var decimalDigitsAndDecimals: CharacterSet {
-        get {
-            var decimalDigitsAndDecimal = CharacterSet.decimalDigits
-            decimalDigitsAndDecimal.insert(charactersIn: ".")
-            return decimalDigitsAndDecimal
-        }
-        
-    }
-}
