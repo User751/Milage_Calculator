@@ -42,7 +42,6 @@
 		BE0AEC0022349D7100E43074 = {
 			isa = PBXGroup;
 			children = (
-				4D0CF11122372D8F00ED86D3 /* Log.swift */,
 				BE0AEC0B22349D7100E43074 /* MilageCalculator */,
 				BE0AEC0A22349D7100E43074 /* Products */,
 			);
@@ -62,6 +61,7 @@
 				BE0AEC0C22349D7100E43074 /* AppDelegate.swift */,
 				BE0AEC0E22349D7100E43074 /* MainViewController.swift */,
 				BE0AEC1E2234A1BD00E43074 /* LogTableViewController.swift */,
+				4D0CF11122372D8F00ED86D3 /* Log.swift */,
 				BE0AEC1022349D7100E43074 /* Main.storyboard */,
 				BE0AEC1322349D7400E43074 /* Assets.xcassets */,
 				BE0AEC1522349D7400E43074 /* LaunchScreen.storyboard */,
