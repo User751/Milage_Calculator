@@ -13,12 +13,10 @@ class MilageCalculatorTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        Log.key = "test"
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-        Log.key = "AllLogs"
     }
 
     func testLogSavingAndLoading() {
@@ -31,12 +29,12 @@ class MilageCalculatorTests: XCTestCase {
         
         let testLogs = [log1,log2,log3]
         
-        _ = Log.saveAllLogs(logs: testLogs)
+        _ = Log.saveAllLogs(logs: testLogs, with: "TestKey")
         
-        let testLogs2 = Log.loadAllLogs()
+        let testLogs2 = Log.loadAllLogs(with: "TestKey")
         
         XCTAssert(testLogs == testLogs2)
-        
+        UserDefaults.standard.removeObject(forKey: "TestKey")
     }
 
 }

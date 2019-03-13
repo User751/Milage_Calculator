@@ -9,17 +9,19 @@
 import Foundation
 
 struct Log: Codable, Equatable {
-    static var key = "AllLogs"
     let date: Date
     let miles: Double
     let gallons: Double
     
     
-    static func loadAllLogs() -> [Log] {
+    static func loadAllLogs(with key: String = "AllLogs") -> [Log] {
         let defaults = UserDefaults.standard
         
-        guard let allLogs = defaults.object(forKey: Log.key) as? [Data] else {
-            fatalError("Could not load logs")
+        guard let allLogs = defaults.object(forKey: key) as? [Data] else {
+            print("No data detected, initializing new data")
+            let initialData = [Data]()
+            defaults.set(initialData, forKey: key)
+            return []
         }
         var decodedLogs = [Log]()
         let decoder = JSONDecoder()
@@ -34,7 +36,7 @@ struct Log: Codable, Equatable {
     }
     
     
-    static func saveAllLogs(logs decodedLogs: [Log]) -> Bool {
+    static func saveAllLogs(logs decodedLogs: [Log], with key: String = "AllLogs") -> Bool {
         
         let encoder = JSONEncoder()
         var encodedLogsArray = [Data]()
@@ -46,12 +48,10 @@ struct Log: Codable, Equatable {
             }
         }
         
-        defaults.set(encodedLogsArray, forKey: Log.key)
+        defaults.set(encodedLogsArray, forKey: key)
         
         return true
         
     }
     
 }
-
-
