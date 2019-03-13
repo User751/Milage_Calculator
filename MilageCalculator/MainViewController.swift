@@ -18,7 +18,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         milesTextField.delegate = self
         gallonsTextField.delegate = self
         
-        
     }
     // If returns false, the input text field will not accept the character
     // Returns false if not a number or a number with one decimal point.
@@ -50,9 +49,36 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
+    func calculateGasMileage(miles: Double, gallonsUsed: Double) -> Double {
+        return miles / gallonsUsed
+    }
+    
     
     @IBAction func didTapLogButton(_ sender: UIButton) {
-        print("Tapped log button")
+    
+        // Calculates the MPG based on the current user input
+
+        let miles = Double(milesTextField.text ?? "0.0")
+        let gallonsUsed = Double(gallonsTextField.text ?? "0.0")
+        
+        guard let milesUnwrapped = miles else {
+            print("Error: cannot convert miles text field value \(milesTextField.text ?? "0.0") into double")
+            return
+        }
+        guard let gallonsUsedUnwrapped = gallonsUsed else {
+            print("Error: cannot convert gallons text field value \(gallonsTextField.text ?? "0.0") into double")
+            return
+        }
+        
+        let calculatedGasMileage = calculateGasMileage(miles: milesUnwrapped, gallonsUsed: gallonsUsedUnwrapped).rounded(to: 2)
+        
+        guard calculatedGasMileage.isFinite else {
+            averageMPGLabel.text = "Average: Tesla!"
+            return
+        }
+        
+        averageMPGLabel.text = "Average: \(calculatedGasMileage) MPG"
+        
     }
     
     @IBAction func seeLogTableButton(_ sender: UIButton) {

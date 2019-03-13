@@ -15,6 +15,7 @@
 		BE0AEC1422349D7400E43074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE0AEC1322349D7400E43074 /* Assets.xcassets */; };
 		BE0AEC1722349D7400E43074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE0AEC1522349D7400E43074 /* LaunchScreen.storyboard */; };
 		BE0AEC1F2234A1BD00E43074 /* LogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AEC1E2234A1BD00E43074 /* LogTableViewController.swift */; };
+		BEF025782238863100E15F77 /* Double-rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF025772238863100E15F77 /* Double-rounded.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BE0AEC1622349D7400E43074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE0AEC1822349D7400E43074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE0AEC1E2234A1BD00E43074 /* LogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewController.swift; sourceTree = "<group>"; };
+		BEF025772238863100E15F77 /* Double-rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double-rounded.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				BE0AEC0C22349D7100E43074 /* AppDelegate.swift */,
 				BE0AEC0E22349D7100E43074 /* MainViewController.swift */,
+				BEF025772238863100E15F77 /* Double-rounded.swift */,
 				BE0AEC1E2234A1BD00E43074 /* LogTableViewController.swift */,
 				4D0CF11122372D8F00ED86D3 /* Log.swift */,
 				4DEE355E223872E40024C3FC /* CharacterSet-decimalDigitsAndDecimals.swift */,
@@ -148,6 +151,7 @@
 				BE0AEC0F22349D7100E43074 /* MainViewController.swift in Sources */,
 				4DEE355F223872E40024C3FC /* CharacterSet-decimalDigitsAndDecimals.swift in Sources */,
 				4D0CF11222372D8F00ED86D3 /* Log.swift in Sources */,
+				BEF025782238863100E15F77 /* Double-rounded.swift in Sources */,
 				BE0AEC0D22349D7100E43074 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
