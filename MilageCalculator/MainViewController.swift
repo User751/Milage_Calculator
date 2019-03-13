@@ -12,11 +12,14 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var milesTextField: UITextField!
     @IBOutlet weak var gallonsTextField: UITextField!
     @IBOutlet weak var averageMPGLabel: UILabel!
+    var loggedData = [Log]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         milesTextField.delegate = self
         gallonsTextField.delegate = self
+        
+        loggedData = Log.loadAllLogs()
         
     }
     // If returns false, the input text field will not accept the character
@@ -77,6 +80,10 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
+        let log = Log(date: Date(), miles: milesUnwrapped, gallons: gallonsUsedUnwrapped)
+        loggedData.append(log)
+        _ = Log.saveAllLogs(logs: loggedData)
+        
         averageMPGLabel.text = "Average: \(calculatedGasMileage) MPG"
         
     }
@@ -84,8 +91,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBAction func seeLogTableButton(_ sender: UIButton) {
         print("Tapped log table")
         if let vc = storyboard?.instantiateViewController(withIdentifier: "LogTable") as? LogTableViewController {
+            vc.loggedData = loggedData
             navigationController?.pushViewController(vc, animated: true)
-            
         }
     }
 }
