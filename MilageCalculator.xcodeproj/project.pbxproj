@@ -16,7 +16,18 @@
 		BE0AEC1722349D7400E43074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE0AEC1522349D7400E43074 /* LaunchScreen.storyboard */; };
 		BE0AEC1F2234A1BD00E43074 /* LogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0AEC1E2234A1BD00E43074 /* LogTableViewController.swift */; };
 		BEF025782238863100E15F77 /* Double-rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF025772238863100E15F77 /* Double-rounded.swift */; };
+		BEF025AF2238CA5200E15F77 /* MilageCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF025AE2238CA5200E15F77 /* MilageCalculatorTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEF025B12238CA5200E15F77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE0AEC0122349D7100E43074 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE0AEC0822349D7100E43074;
+			remoteInfo = MilageCalculator;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4D0CF11122372D8F00ED86D3 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -30,10 +41,20 @@
 		BE0AEC1822349D7400E43074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE0AEC1E2234A1BD00E43074 /* LogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewController.swift; sourceTree = "<group>"; };
 		BEF025772238863100E15F77 /* Double-rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double-rounded.swift"; sourceTree = "<group>"; };
+		BEF025AC2238CA5200E15F77 /* MilageCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MilageCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEF025AE2238CA5200E15F77 /* MilageCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilageCalculatorTests.swift; sourceTree = "<group>"; };
+		BEF025B02238CA5200E15F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BE0AEC0622349D7100E43074 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEF025A92238CA5200E15F77 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				BE0AEC0B22349D7100E43074 /* MilageCalculator */,
+				BEF025AD2238CA5200E15F77 /* MilageCalculatorTests */,
 				BE0AEC0A22349D7100E43074 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				BE0AEC0922349D7100E43074 /* MilageCalculator.app */,
+				BEF025AC2238CA5200E15F77 /* MilageCalculatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,16 +87,25 @@
 			children = (
 				BE0AEC0C22349D7100E43074 /* AppDelegate.swift */,
 				BE0AEC0E22349D7100E43074 /* MainViewController.swift */,
-				BEF025772238863100E15F77 /* Double-rounded.swift */,
 				BE0AEC1E2234A1BD00E43074 /* LogTableViewController.swift */,
 				4D0CF11122372D8F00ED86D3 /* Log.swift */,
 				4DEE355E223872E40024C3FC /* CharacterSet-decimalDigitsAndDecimals.swift */,
 				BE0AEC1022349D7100E43074 /* Main.storyboard */,
+				BEF025772238863100E15F77 /* Double-rounded.swift */,
 				BE0AEC1322349D7400E43074 /* Assets.xcassets */,
 				BE0AEC1522349D7400E43074 /* LaunchScreen.storyboard */,
 				BE0AEC1822349D7400E43074 /* Info.plist */,
 			);
 			path = MilageCalculator;
+			sourceTree = "<group>";
+		};
+		BEF025AD2238CA5200E15F77 /* MilageCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEF025AE2238CA5200E15F77 /* MilageCalculatorTests.swift */,
+				BEF025B02238CA5200E15F77 /* Info.plist */,
+			);
+			path = MilageCalculatorTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +128,24 @@
 			productReference = BE0AEC0922349D7100E43074 /* MilageCalculator.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BEF025AB2238CA5200E15F77 /* MilageCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEF025B32238CA5200E15F77 /* Build configuration list for PBXNativeTarget "MilageCalculatorTests" */;
+			buildPhases = (
+				BEF025A82238CA5200E15F77 /* Sources */,
+				BEF025A92238CA5200E15F77 /* Frameworks */,
+				BEF025AA2238CA5200E15F77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEF025B22238CA5200E15F77 /* PBXTargetDependency */,
+			);
+			name = MilageCalculatorTests;
+			productName = MilageCalculatorTests;
+			productReference = BEF025AC2238CA5200E15F77 /* MilageCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -108,6 +158,10 @@
 				TargetAttributes = {
 					BE0AEC0822349D7100E43074 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					BEF025AB2238CA5200E15F77 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = BE0AEC0822349D7100E43074;
 					};
 				};
 			};
@@ -125,6 +179,7 @@
 			projectRoot = "";
 			targets = (
 				BE0AEC0822349D7100E43074 /* MilageCalculator */,
+				BEF025AB2238CA5200E15F77 /* MilageCalculatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +192,13 @@
 				BE0AEC1722349D7400E43074 /* LaunchScreen.storyboard in Resources */,
 				BE0AEC1422349D7400E43074 /* Assets.xcassets in Resources */,
 				BE0AEC1222349D7100E43074 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEF025AA2238CA5200E15F77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +218,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEF025A82238CA5200E15F77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEF025AF2238CA5200E15F77 /* MilageCalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEF025B22238CA5200E15F77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE0AEC0822349D7100E43074 /* MilageCalculator */;
+			targetProxy = BEF025B12238CA5200E15F77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BE0AEC1022349D7100E43074 /* Main.storyboard */ = {
@@ -328,6 +406,44 @@
 			};
 			name = Release;
 		};
+		BEF025B42238CA5200E15F77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MilageCalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Bestest.MilageCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MilageCalculator.app/MilageCalculator";
+			};
+			name = Debug;
+		};
+		BEF025B52238CA5200E15F77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MilageCalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Bestest.MilageCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MilageCalculator.app/MilageCalculator";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -345,6 +461,15 @@
 			buildConfigurations = (
 				BE0AEC1C22349D7400E43074 /* Debug */,
 				BE0AEC1D22349D7400E43074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEF025B32238CA5200E15F77 /* Build configuration list for PBXNativeTarget "MilageCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEF025B42238CA5200E15F77 /* Debug */,
+				BEF025B52238CA5200E15F77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
